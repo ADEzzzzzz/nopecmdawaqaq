@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.computerqqcom.ga/err4xx.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; URL=/" />
+    <title>Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        #myProgress {
+            width: 80%;
+            height: 30px;
+            position: relative;
+            background-color: #ddd;
+        }
+        
+        #myBar {
+            background-color: #4CAF50;
+            width: 10px;
+            height: 30px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body onload="move()">
+    <p>
+        <main>
+            <h1>404 Not Found</h1>
+            <div>
+                Uh-oh! We couldn't find the page you are looking for.
+            </div>
+        </main>
+        <p>This page will be automatically redirected to the Homepage after 3 seconds.</p>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <script>
+            function move() {
+                var elem = document.getElementById("myBar");
+                var width = 0;
+                var id = setInterval(frame, 26);
+
+                function frame() {
+                    if (width == 100) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        elem.style.width = width + '%';
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
